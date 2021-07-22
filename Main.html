@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html>
+<script>
+    /*
+    객체
+    var coworkers = {
+        "programmer": "egoing",
+        "designer": "leezche"
+    };
+    coworkers.bookkeeper = "duru";
+    coworkers["data scientist"] = "taeho";
+    */
+
+    function setmenuColor(color) {
+        var menu = document.querySelectorAll('a');
+        var i = 0;
+        while (i < menu.length) {
+            menu[i].style.color = color;
+            i++;
+        }
+    }
+    function nightDayHandler(self) {
+        var target = document.querySelector('body');
+
+        if (self.value === 'night') {
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            setmenuColor('white');
+            self.value = 'day';
+        } else {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            setmenuColor('black');
+            self.value = 'night';
+        }
+    }
+</script>
+<head>
+    <title>Ilustration</title>
+    <meta charset="utf-8">
+
+    <!--style 이라는건 CSS의 문법대로 처리-->
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+    <h1><a href="Main.html">Ilustration</a></h1>
+
+    <input type="button" value="night" onclick="
+       nightDayHandler(this);
+    ">
+
+
+    <div id="grid">
+
+        <ul>
+            <li><strong><a href="Black.html">Black&white</a></strong></li>
+            <li><strong><a href="Color.html">Color</a></strong></li>
+
+        </ul>
+
+        <img src="210323''.jpg" width="350">
+        <img src="210217-최종2.jpg" width="350">
+        <img src="210511-02.jpg" width="350">
+        <!--
+        <p>Webpage of artworks</p>
+
+        <p>:D</p>
+        -->
+
+    </div>
+</body>
+</html>
